@@ -1,14 +1,15 @@
 package com.ndrewcoding.lessons;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class TesteLeituraComScanner {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("contas.csv"));
+        Scanner scanner = new Scanner(new File("contas.csv"), StandardCharsets.UTF_8);
 
         while (scanner.hasNextLine()) {
             String linha = scanner.nextLine();
