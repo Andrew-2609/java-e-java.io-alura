@@ -11,7 +11,18 @@ public class TesteLeituraComScanner {
 
         while (scanner.hasNextLine()) {
             String linha = scanner.nextLine();
-            System.out.println(linha);
+
+            Scanner linhaScanner = new Scanner(linha);
+            linhaScanner.useDelimiter(",");
+
+            while (linhaScanner.hasNextLine()) {
+                String valor = linhaScanner.next();
+                System.out.print(valor);
+            }
+
+            System.out.println();
+
+            linhaScanner.close();
         }
 
         scanner.close();
