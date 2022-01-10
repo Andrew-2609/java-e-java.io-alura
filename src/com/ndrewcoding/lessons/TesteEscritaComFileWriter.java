@@ -9,7 +9,7 @@ public class TesteEscritaComFileWriter {
         FileWriter fileWriter = new FileWriter("generated.txt");
 
         fileWriter.write("Primeira linha com FIleWriter. Olá!");
-        fileWriter.write("\n");
+        fileWriter.write(System.lineSeparator());
         fileWriter.write("Segunda linha com FIleWriter.");
 
         fileWriter.close();
