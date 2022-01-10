@@ -14,16 +14,22 @@ public class TesteLeituraComScanner {
             String linha = scanner.nextLine();
 
             Scanner linhaScanner = new Scanner(linha);
+            linhaScanner.useDelimiter(",");
             linhaScanner.useLocale(Locale.US);
 
-            linhaScanner.useDelimiter(",");
+            String tipoDeConta = linhaScanner.next();
+            int agencia = linhaScanner.nextInt();
+            int numero = linhaScanner.nextInt();
+            String titular = linhaScanner.next();
+            double saldo = linhaScanner.nextDouble();
 
-            while (linhaScanner.hasNextLine()) {
-                String valor = linhaScanner.next();
-                System.out.print(valor);
-            }
+            System.out.format(
+                    new Locale("pt", "BR"),
+                    "Tipo de conta: %s\nAgência: %d; Número: %d\nTitular: %s\nSaldo: %.2f",
+                    tipoDeConta, agencia, numero, titular, saldo
+            );
 
-            System.out.println();
+            System.out.println("\n");
 
             linhaScanner.close();
         }
