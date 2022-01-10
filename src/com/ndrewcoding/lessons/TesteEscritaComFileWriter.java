@@ -7,9 +7,7 @@ import java.io.IOException;
 public class TesteEscritaComFileWriter {
     public static void main(String[] args) throws IOException {
 
-        FileWriter fileWriter = new FileWriter("generated.txt");
-
-        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("generated.txt"));
         bufferedWriter.write("Primeira linha com FIleWriter e BufferedWriter. Olá!");
         bufferedWriter.newLine();
         bufferedWriter.write("Segunda linha com FIleWriter e BufferedWriter.");
