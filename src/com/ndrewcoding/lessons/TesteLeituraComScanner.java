@@ -2,6 +2,7 @@ package com.ndrewcoding.lessons;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class TesteLeituraComScanner {
@@ -13,6 +14,8 @@ public class TesteLeituraComScanner {
             String linha = scanner.nextLine();
 
             Scanner linhaScanner = new Scanner(linha);
+            linhaScanner.useLocale(Locale.US);
+
             linhaScanner.useDelimiter(",");
 
             while (linhaScanner.hasNextLine()) {
