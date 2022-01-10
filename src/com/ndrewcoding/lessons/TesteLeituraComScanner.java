@@ -25,11 +25,9 @@ public class TesteLeituraComScanner {
 
             System.out.format(
                     new Locale("pt", "BR"),
-                    "Tipo de conta: %s\nAgência: %d; Número: %d\nTitular: %s\nSaldo: %.2f",
+                    "%nTipo de conta: %s\nAgência: %d; Número: %d\nTitular: %s\nSaldo: %.2f%n",
                     tipoDeConta, agencia, numero, titular, saldo
             );
-
-            System.out.println("\n");
 
             linhaScanner.close();
         }
