@@ -1,19 +1,18 @@
 package com.ndrewcoding.lessons;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class TesteEscritaComFileWriter {
     public static void main(String[] args) throws IOException {
 
-        OutputStream fileOutputStream = new FileOutputStream("generated.txt");
-        Writer outputStreamWriter = new OutputStreamWriter(fileOutputStream);
-        BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+        FileWriter fileWriter = new FileWriter("generated.txt");
 
-        bufferedWriter.write("Primeira linha. Olá!");
-        bufferedWriter.newLine();
-        bufferedWriter.write("Segunda linha.");
+        fileWriter.write("Primeira linha com FIleWriter. Olá!");
+        fileWriter.write("\n");
+        fileWriter.write("Segunda linha com FIleWriter.");
 
-        bufferedWriter.close();
+        fileWriter.close();
 
     }
 }
