@@ -1,18 +1,17 @@
 package com.ndrewcoding.lessons;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
 
-public class TesteEscritaComFileWriter {
+public class TesteEscritaComPrintStream {
     public static void main(String[] args) throws IOException {
 
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("generated.txt"));
-        bufferedWriter.write("Primeira linha com FIleWriter e BufferedWriter. Olá!");
-        bufferedWriter.newLine();
-        bufferedWriter.write("Segunda linha com FIleWriter e BufferedWriter.");
+        PrintStream printStream = new PrintStream("generated.txt");
+        printStream.println("Primeira linha com PrintStream. Olá!");
+        printStream.println();
+        printStream.println("Segunda linha com PrintStream.");
 
-        bufferedWriter.close();
+        printStream.close();
 
     }
 }
