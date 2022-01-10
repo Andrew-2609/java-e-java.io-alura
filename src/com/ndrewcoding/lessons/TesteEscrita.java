@@ -5,8 +5,8 @@ import java.io.*;
 public class TesteEscrita {
     public static void main(String[] args) throws IOException {
 
-        FileOutputStream fileOutputStream = new FileOutputStream("generated.txt");
-        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
+        OutputStream fileOutputStream = new FileOutputStream("generated.txt");
+        Writer outputStreamWriter = new OutputStreamWriter(fileOutputStream);
         BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
         bufferedWriter.write("Primeira linha. Olá!");
