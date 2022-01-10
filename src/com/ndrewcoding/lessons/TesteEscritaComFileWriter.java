@@ -1,5 +1,6 @@
 package com.ndrewcoding.lessons;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -8,11 +9,12 @@ public class TesteEscritaComFileWriter {
 
         FileWriter fileWriter = new FileWriter("generated.txt");
 
-        fileWriter.write("Primeira linha com FIleWriter. Olá!");
-        fileWriter.write(System.lineSeparator());
-        fileWriter.write("Segunda linha com FIleWriter.");
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        bufferedWriter.write("Primeira linha com FIleWriter e BufferedWriter. Olá!");
+        bufferedWriter.newLine();
+        bufferedWriter.write("Segunda linha com FIleWriter e BufferedWriter.");
 
-        fileWriter.close();
+        bufferedWriter.close();
 
     }
 }
